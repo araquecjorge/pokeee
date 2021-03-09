@@ -41,7 +41,7 @@ const Pokedex = () =>{
         console.log(slide);
     }
 
-    if(loading) return 'Loading...'
+    if(loading) return 'Loading... '
   
     const MyArrayOfPokes =  isPokes.map((value) => {
             return (
@@ -55,7 +55,7 @@ const Pokedex = () =>{
   
     return(
         <>
-            <div className='log'></div>
+            <div className='logo-poke'></div>
             <ButtonCheck 
                 selector={Selector}
             />
@@ -69,8 +69,24 @@ const Pokedex = () =>{
                     preview={prevPage ? prevPageLink : null}
                 />
             </div>
-            <div className='pie-pagina'>
-            </div>
+            <div className='footer'>
+               <h2>Team</h2> 
+                <div className='squad'>
+                        <h4>Cesar O.</h4>
+                        paulocesarorozcoguerrero@hotmail.com<br/> 
+                        +52 56-1604-6595<br/>
+                    </div>
+                    <div className='squad'>
+                        <h4>Sandra R.</h4>
+                        sam.rodriguezr.89@gmail.com<br/> 
+                        +xx xxx-xxx-xxxx<br/>
+                    </div>
+                    <div className='squad'>
+                        <h4>Jorge A.</h4>
+                        araquecjorge@gmail.com<br/> 
+                        +57 321-779-5401<br/>
+                    </div>
+                </div>
         </>
     );
   }

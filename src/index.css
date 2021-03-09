@@ -4,11 +4,11 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
+/* ---------------------General styles--------------------- */
 body{
   background-color: #bd2000;
 }
-
+/* ---------------------Login--------------------- */
 .login{
   display: flex;
   justify-content: center;
@@ -16,9 +16,7 @@ body{
   width: 100vw;
   height: 70vh;
 }
-
 .card-login{
-  width: 25%;
   height: 25%;
   background-color: wheat;
   border-radius: 15px;
@@ -27,12 +25,15 @@ body{
   flex-wrap: wrap;
   font-size: 12px;
 }
-
 .p-log{
+  padding-top: 15px;
   width: 100%;
   height: 60%;
+  text-align: center;
+  font-weight: 900;
+  text-shadow: 0px 0px 5px #2b3b80;
+  color: #ffda4d;
 }
-
 .b-log{
   width: 100%;
   height: 40%;
@@ -40,7 +41,6 @@ body{
   justify-content: center;
   align-items: center;
 }
-
 .logo-poke{
   margin: auto;
   width: 60vw;
@@ -50,58 +50,115 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .btn-login{
+  font-weight: 900;
+  border-radius: 30px;
   padding: 10px 25px;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: #bd2000;
+  color: white;
 }
-
+.btn-login:hover{
+  border-radius: 30px;
+  padding: 10px 25px;
+  background-color: rgb(255, 241, 241);
+  color: black;
+}
+/* ---------------------Home Styles--------------------- */
 .card-poke{
   width: 80%;
-  height: 30vh;
+  /* height: 30vh; */
   padding: 10px;
   margin: auto;
 }
-
 .card-info{
+  padding: 15px;
   width: 100%;
   height: 100%;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #e2e2e2;
   border-radius: 15px;
 }
-
-.pie-pagina{
-  width: 100vw;
-  height: 20vh;
-  background-color: black;
+.text-info{
+  text-transform: capitalize;
 }
-
 .log{
   width: 100vw;
   height: 20vh;
   background-color: black;
 }
-
+/* ---------------------Pagination--------------------- */
 .pagination{
   width: 100%;
-  height: 10vh;
-  border: solid 2px black;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
-
 :root {
-  --color-green: #00a878;
-  --color-red: #fe5e41;
-  --color-button: #fdffff;
+  --color-green: #316ab2;
+  --color-red: #ffca00;
+  --color-button: rgb(255 241 241);
   --color-black: #000;
 }
+.BtnPagination{
+  padding: 10px 25px;
+  font-weight: 900;
+  border: none;
+  background-color: #bd2000;
+  color: white;
+}
+/* ---------------------Switch part--------------------- */
+.EnterPokeSearch{
+  text-shadow: 3px 3px 5px #0030ff;
+  color: #ffca00;
+  padding: 15px;
+  text-align: center;
+  font-weight: 900;
+}
+.EnterPokeForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EnterPokeBtn{
+  display: flex;
+  padding: 10px 25px;
+  border-radius: 40px;
+  font-weight: 900;
+  border: none;
+  background-color: #bd2000;
+  color: white;
+}
+.EnterPokeBtn:hover{
+  background-color:white;
+  color: #bd2000;
+}
+.selecType{
+  text-shadow: -8px -1px 15px #ffd63b;
+  color: #0429c5;
+  padding: 15px;
+  text-align: center;
+  font-weight: 900;
+}
+.selecTypeForm{
+  justify-content: center;
+  display: flex;
+}
+select {
+  background-color: #dab114;
+  color: #2b3b80;
+  font-weight: 900;
+  border-radius: 20px;
+}
 .switch-button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .switch-button .switch-button__checkbox {
   display: none;
@@ -130,4 +187,13 @@ body{
 }
 .switch-button .switch-button__checkbox:checked + .switch-button__label:before {
   transform: translateX(2rem);
+}
+/* ---------------------footer part--------------------- */
+.footer{
+  margin-left: 10%;
+  margin-right: 10%;
+  color: white;
+}
+.squad{
+  margin: 10px;
 }

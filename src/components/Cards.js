@@ -29,8 +29,10 @@ export const PokemonApi = ({name, url}) => {
             <div className='card-info'>
                 
                 <img src={pokemon} alt={name}/>
+                <div className='text-info'>
                 <h2>{name}</h2>
-                <span>Types:</span>{types ? types.map((value) => {
+                <h3>Types:</h3>
+                {types ? types.map((value) => {
                     return <p>{value.type.name}</p>
                     }):null
                  }
@@ -38,6 +40,7 @@ export const PokemonApi = ({name, url}) => {
                 <p>Attack: {attack}</p>
                 <p>Defense: {defense}</p>
                 <p>Speed: {speed}</p>
+                </div>
             </div>
         </div>
     );
@@ -56,12 +59,12 @@ export const InputPokemon = () => {
     const {register, handleSubmit} = useForm;
     return (
        <>
-          <p>Ingresa el pokemon a buscar:</p>
-          <form onSubmit={handleSubmit}>
+          <p className="EnterPokeSearch">Ingresa el pokemon a buscar:</p>
+          <form className="EnterPokeForm" onSubmit={handleSubmit}>
             <label>
                 <input ref={register}/>
             </label>
-            <button>Get Pokemon</button>
+            <button className="EnterPokeBtn">Get Pokemon</button>
           </form>
        </>
     );
@@ -78,8 +81,8 @@ export const OptionPokemon = () => {
     },[])
    return(
     <>
-        <p>Seleccione el tipo</p>
-        <form onSubmit={handleSubmit}>
+        <p className="selecType">Seleccione el tipo</p>
+        <form className="selecTypeForm" onSubmit={handleSubmit}>
             <select name='pokemon' ref={register}>
                 {types.length > 0 ? types.map((value) => {
                     return <option value={value.name}>{value.name}</option>
